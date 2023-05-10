@@ -15,14 +15,12 @@ function App() {
 
 
   const addTask = () => {
-    if (todoList.includes(newTask)){
-    setNewTask('')
-    alert('You are trying to add duplicate values')
-    
+    if(todoList.includes(newTask)){
+      setNewTask('')
+      alert('Duplicate values are not allowed')
     }else{
-      setToDoList([...todoList , newTask])
+    setToDoList([...todoList , newTask])
     }
-
   }
 
   const deleteTask = (taskName) => {
