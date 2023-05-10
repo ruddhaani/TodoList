@@ -42,8 +42,8 @@ function App() {
 
         return(
           <>
-          <h3 style={{color:`${changedColor}`}}>{task}</h3>
-          <button onClick={() => {deleteTask(task)}}>X</button>
+          <h3>{task}</h3>
+          <button onClick={() => {deleteTask(task)}}>Delete</button>
           </>
         )
 
