@@ -15,8 +15,13 @@ function App() {
 
 
   const addTask = () => {
-
-    setToDoList([...todoList , newTask])
+    if (todoList.includes(newTask)){
+    setNewTask('')
+    alert('You are trying to add duplicate values')
+    
+    }else{
+      setToDoList([...todoList , newTask])
+    }
 
   }
 
