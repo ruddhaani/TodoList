@@ -5,8 +5,7 @@ function App() {
 
   const [todoList , setToDoList] = useState([])
   const [newTask , setNewTask] = useState('')
-  const [color , setColor] = useState('black')
-  const [changedColor , setChangedColor] = useState('black')
+  
 
   const handleChange = (event)=>{
 
@@ -14,15 +13,6 @@ function App() {
 
   }
 
-  const handleChangeColor = (event)=>{
-
-    setColor(event.target.value)
-
-  }
-
-  const changeColor = () => {
-    setChangedColor(color)
-  }
 
   const addTask = () => {
 
@@ -48,10 +38,6 @@ function App() {
       <button onClick={addTask}>Add</button>
       </div>
 
-      <div>
-      <input onChange={handleChangeColor}/>
-      <button onClick={changeColor}>Change Color</button>
-      </div>
       {todoList.map((task) => {
 
         return(
